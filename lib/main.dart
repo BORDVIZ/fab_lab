@@ -1,8 +1,12 @@
+import 'package:fab_lab/constants/custom_colors.dart';
 import 'package:fab_lab/pages/initial_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main(List<String> args) {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarBrightness: Brightness.dark,
+  ));
   runApp(const MyApp());
 }
 
@@ -15,11 +19,10 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: InitialPage(
-        //TO-DO auth
-      ),
+      theme: ThemeData(scaffoldBackgroundColor: CustomColors.background),
+      home: const InitialPage(),
     );
   }
 }
