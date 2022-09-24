@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "975620693775",
+    "project_id": "fab-lab-906f1",
+    "storage_bucket": "fab-lab-906f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975620693775:android:de435a0200fa21c2b6287a",
+        "android_client_info": {
+          "package_name": "com.majesticscripts.fab_lab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975620693775-rvuu84lgmdjjtr5t36aqa816rp8crjr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALQJaxDPKrcoK2gJmDRnpsOdO8wWoBaW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975620693775-rvuu84lgmdjjtr5t36aqa816rp8crjr2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
