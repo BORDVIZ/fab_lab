@@ -144,58 +144,83 @@ class CheckPage extends StatelessWidget {
           padding: const EdgeInsets.all(0),
           itemBuilder: (context, index) {
             return Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                child: InkWell(
-                  onTap: () => print(index),
-                  child: Container(
-                    padding: const EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                        gradient: const RadialGradient(radius: 1.5, colors: [
-                          Colors.blue,
-                          Color.fromARGB(255, 63, 50, 157),
-                        ]),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              child: Container(
+                padding: const EdgeInsets.all(3),
+                decoration: BoxDecoration(
+                  gradient: const RadialGradient(
+                    radius: 5,
+                    colors: [
+                      Color.fromARGB(255, 63, 50, 157),
+                      Color.fromARGB(255, 160, 10, 177),
+                       Colors.blue,
+                    ]
+                  ),
+                  border: Border.all(color: Colors.white, width: 0.2),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20),
+                  )
+                ),
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        ),
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                    child: Container(
+                      padding: const EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        gradient: RadialGradient(
+                          radius: 3,
+                          colors: [
+                            Colors.grey.shade900.withOpacity(0.5),
+                            Colors.grey.shade300.withOpacity(0.3),
+                            Colors.white.withOpacity(0.3),
+                          ]
+                        ),
                         border: Border.all(color: Colors.white, width: 0.2),
                         borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(20),
                           topRight: Radius.circular(20),
                           bottomLeft: Radius.circular(20),
-                        )),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CircleAvatar(
-                          radius: 25,
-                          backgroundColor: CustomColors.background,
-                          child: Padding(
-                            padding: const EdgeInsets.all(4),
-                            child: Image.asset(
-                              'assets/images/fab_lab.png',
-                              color: Colors.white,
+                        )
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CircleAvatar(
+                            radius: 25,
+                            backgroundColor: CustomColors.background,
+                            child: Padding(
+                              padding: const EdgeInsets.all(4),
+                              child: Image.asset('assets/images/fab_lab.png', color: Colors.white,),
                             ),
                           ),
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                            child: Container(
-                              padding: const EdgeInsets.all(10),
-                              decoration: BoxDecoration(
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: BackdropFilter(
+                              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                              child: Container(
+                                padding: const EdgeInsets.all(10),
+                                decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color:
-                                      CustomColors.background.withOpacity(0.3)),
-                              child: const Text(
-                                'Робототехника',
-                                style: ttwhite16W500,
+                                  color: CustomColors.background.withOpacity(0.25)
+                                ),
+                                child: const Text('Робототехника', style: ttwhite16W500,),
                               ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                ));
+                ),
+              )
+            );
           },
         ),
       ],
@@ -224,28 +249,64 @@ class CalendarPage extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(20),
           child: Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: CustomColors.light),
-            child: TableCalendar(
-              firstDay: DateTime(2022, 10, 1),
-              lastDay: DateTime(2022, 10, 31),
-              focusedDay: DateTime.now(),
-              headerVisible: false,
-              eventLoader: (day) {
-                List days = [DateTime.monday, DateTime.wednesday];
-                for (int i = 0; i < days.length;i++){
-                  if (day.weekday == days[i]) {
-                  return [day];
-                }
-                }
-                return [];
-              },
-              availableCalendarFormats: const {
-                CalendarFormat.month: '',
-              },
-              startingDayOfWeek: StartingDayOfWeek.monday,
+            padding: const EdgeInsets.all(3),
+            decoration:  BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              gradient: const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color.fromARGB(255, 160, 10, 177),
+                  Color.fromARGB(255, 102, 27, 240),
+                  Color.fromARGB(255, 73, 121, 255),
+                ])),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    gradient: RadialGradient(
+                      radius: 3,
+                      colors: [
+                        Colors.grey.shade900.withOpacity(0.5),
+                        Colors.grey.shade300.withOpacity(0.3),
+                        Colors.white.withOpacity(0.3),
+                      ]
+                    ),
+                  ),
+                  child: TableCalendar(
+                    firstDay: DateTime(2022, 10, 1),
+                    lastDay: DateTime(2022, 10, 31),
+                    focusedDay: DateTime.now(),
+                    calendarStyle: CalendarStyle(
+                      disabledTextStyle: const TextStyle(color: Colors.grey),
+                      weekendTextStyle: TextStyle(color: CustomColors.background.withOpacity(0.5)),
+                      markerDecoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10))
+                    ),
+                    daysOfWeekStyle: const DaysOfWeekStyle(
+                      weekdayStyle: TextStyle(color: Colors.blue),
+                      weekendStyle: TextStyle(color: Colors.pink)
+                    ),
+                    headerVisible: false,
+                    eventLoader: (day) {
+                      List days = [DateTime.monday, DateTime.wednesday,];
+                      for (int i = 0; i < days.length;i++){
+                        if (day.weekday == days[i]) {
+                        return [day];
+                      }
+                      }
+                      return [];
+                    },
+                    availableCalendarFormats: const {
+                      CalendarFormat.month: '',
+                    },
+                    startingDayOfWeek: StartingDayOfWeek.monday,
+                  ),
+                ),
+              ),
             ),
           ),
         ),

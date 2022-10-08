@@ -1,6 +1,6 @@
 import 'package:fab_lab/bloc/providers.dart';
 import 'package:fab_lab/constants/custom_colors.dart';
-import 'package:fab_lab/pages/initial_page.dart';
+import 'package:fab_lab/pages/splash_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(scaffoldBackgroundColor: CustomColors.background),
-        home: const InitialPage(),
+        home: const SplashPage(),
       ),
     );
   }
