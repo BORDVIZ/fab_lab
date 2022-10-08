@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>975620693775-s52qpp7no052tipeveqad7qekhssi545.apps.googleusercontent.com</string>
+	<string>1043848128777-1mmacima69td5cok19mlhciv9eojrtmf.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.975620693775-s52qpp7no052tipeveqad7qekhssi545</string>
+	<string>com.googleusercontent.apps.1043848128777-1mmacima69td5cok19mlhciv9eojrtmf</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDe6wjruSQmItIJVwJAet-WF_xo1YOPwMc</string>
+	<string>AIzaSyAm2n5fQfjuJUb_-YGN4dpHy6RniLq2IoE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>975620693775</string>
+	<string>1043848128777</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.majesticscripts.fabLab</string>
 	<key>PROJECT_ID</key>
-	<string>fab-lab-906f1</string>
+	<string>fab-lab-47e8d</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fab-lab-906f1.appspot.com</string>
+	<string>fab-lab-47e8d.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:975620693775:ios:8249cd48ce013bf5b6287a</string>
+	<string>1:1043848128777:ios:f27b063c6378d0e6b54bd8</string>
 </dict>
 </plist>

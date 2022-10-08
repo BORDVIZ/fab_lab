@@ -43,6 +43,7 @@ dependencies:
   qr_code_scanner: ^1.0.0
   cloud_firestore: ^3.4.9
   firebase_core: ^1.23.0
+  table_calendar: ^3.0.7
 
 dev_dependencies:
   flutter_test:
