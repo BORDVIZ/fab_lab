@@ -47,7 +47,7 @@ class CustomBottomBar extends StatelessWidget {
                       InkWell(
                         onTap:() => BlocProvider.of<BottomBarCubit>(context).changePage(1), 
                         child: Image.asset(
-                          'assets/icons/chart.png',
+                          'assets/icons/check.png',
                           width: 30,
                           color: state.page==1?Colors.white:CustomColors.background.withOpacity(0.85),
                         ),
@@ -55,17 +55,9 @@ class CustomBottomBar extends StatelessWidget {
                       InkWell(
                         onTap:() => BlocProvider.of<BottomBarCubit>(context).changePage(2), 
                         child: Image.asset(
-                          'assets/icons/check.png',
-                          width: 30,
-                          color: state.page==2?Colors.white:CustomColors.background.withOpacity(0.85),
-                        ),
-                      ),
-                      InkWell(
-                        onTap:() => BlocProvider.of<BottomBarCubit>(context).changePage(3), 
-                        child: Image.asset(
                           'assets/icons/calendar.png',
                           width: 30,
-                          color: state.page==3?Colors.white:CustomColors.background.withOpacity(0.85),
+                          color: state.page==2?Colors.white:CustomColors.background.withOpacity(0.85),
                         ),
                       ),
                     ],

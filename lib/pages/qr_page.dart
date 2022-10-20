@@ -1,14 +1,17 @@
 import 'dart:developer';
 import 'dart:io';
 
+import 'package:fab_lab/bloc/login%20cubit/login_cubit.dart';
 import 'package:fab_lab/constants/my_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 import '../constants/custom_colors.dart';
 
 class QRPage extends StatefulWidget {
-  const QRPage({Key? key}) : super(key: key);
+  const QRPage({Key? key, required this.cont}) : super(key: key);
+  final cont;
 
   @override
   State<StatefulWidget> createState() => _QRPageState();
@@ -18,7 +21,6 @@ class _QRPageState extends State<QRPage> {
   Barcode? result;
   QRViewController? controller;
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
-
 
   @override
   void reassemble() {
@@ -94,8 +96,9 @@ class _QRPageState extends State<QRPage> {
         setState(() {
           count++;
         });
-        print(scanData.code.toString());
         Navigator.of(context).pop();
+        BlocProvider.of<LoginCubit>(context)
+            .checkToken(scanData.code.toString(), widget.cont);
       }
     });
   }
@@ -104,7 +107,7 @@ class _QRPageState extends State<QRPage> {
     log('${DateTime.now().toIso8601String()}_onPermissionSet $p');
     if (!p) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('no Permission')),
+        const SnackBar(content: Text('Нет доступа к камере')),
       );
     }
   }

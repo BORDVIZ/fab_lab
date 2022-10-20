@@ -1,4 +1,5 @@
 import 'package:fab_lab/bloc/auth%20cubit/auth_cubit.dart';
+import 'package:fab_lab/view/login_view.dart';
 import 'package:fab_lab/view/main_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,8 +34,9 @@ class _InitialPageState extends State<InitialPage> {
                     color: Colors.white,
                     backgroundColor: Colors.transparent,
                   ),
-                  // child: state.firstLaunch?const MainView():const LoginView()),
-                  child: const MainView()),
+                  child:
+                      state.firstLaunch ? const MainView() : const LoginView()),
+              // child: const MainView()),
             ),
           );
         }
