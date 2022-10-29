@@ -4,7 +4,7 @@ import 'package:fab_lab/bloc/user%20cubit/user_cubit.dart';
 import 'package:fab_lab/constants/custom_colors.dart';
 import 'package:fab_lab/constants/my_styles.dart';
 import 'package:fab_lab/pages/add_admin_page.dart';
-import 'package:fab_lab/pages/admin_home_page.dart';
+import 'package:fab_lab/pages/admin_main_page.dart';
 import 'package:fab_lab/pages/calendar_page.dart';
 import 'package:fab_lab/pages/check_page.dart';
 import 'package:fab_lab/widgets/custom_admin_bottom_bar.dart';
@@ -104,24 +104,22 @@ class _MainViewState extends State<MainView> {
                                   child: Stack(
                                     children: [
                                       SizedBox(
-                                          child: 
-                                          userState.userModel['isAdmin']==null
-                                          ?const SizedBox()
-                                          :userState.userModel['isAdmin']?
-                                            state.page == 0
-                                              ? const AdminHomePage()
-                                              : state.page == 1
-                                                  ? const AddAdminPage()
-                                                  : state.page == 2
-                                                      ? const CalendarPage()
-                                                      : const SizedBox()                                      
+                                          child:
+                                          userState.userModel['isAdmin']!=null?
+                                          userState.userModel['isAdmin']? 
+                                          state.page == 0? const AdminMainPage()
+                                            :state.page ==1?const AddAdminPage()
+                                              :state.page ==2?const AddAdminPage()
+                                                :state.page ==3?const AddAdminPage()
+                                                  :const SizedBox()                                   
                                           :state.page == 0
-                                              ? const HomePage()
-                                              : state.page == 1
-                                                  ? const CheckPage()
-                                                  : state.page == 2
-                                                      ? const CalendarPage()
-                                                      : const SizedBox()),
+                                            ? const HomePage()
+                                            : state.page == 1
+                                                ? const CheckPage()
+                                                : state.page == 2
+                                                    ? const CalendarPage()
+                                                    : const SizedBox()
+                                                      :const SizedBox()),
                                       userState.userModel['isAdmin']==null
                                       ?const SizedBox()
                                       :!userState.userModel['isAdmin']?

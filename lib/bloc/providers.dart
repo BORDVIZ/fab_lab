@@ -1,6 +1,8 @@
+import 'package:fab_lab/bloc/add%20user%20cubit/add_user_cubit.dart';
 import 'package:fab_lab/bloc/auth%20cubit/auth_cubit.dart';
 import 'package:fab_lab/bloc/bottom%20bar%20cubit/bottom_bar_cubit.dart';
 import 'package:fab_lab/bloc/calendar%20cubit/calendar_cubit.dart';
+import 'package:fab_lab/bloc/days%20cubit/days_cubit.dart';
 import 'package:fab_lab/bloc/loading%20cubit/loading_cubit.dart';
 import 'package:fab_lab/bloc/login%20cubit/login_cubit.dart';
 import 'package:fab_lab/bloc/news%20cubit/news_cubit.dart';
@@ -19,5 +21,7 @@ class BlocProviders {
     BlocProvider<LoadingCubit>(create: (_)=> LoadingCubit(),),
     BlocProvider<PresentCubit>(create: (_)=> PresentCubit(),),
     BlocProvider<CalendarCubit>(create: (_)=> CalendarCubit(),),
+    BlocProvider<AddUserCubit>(create: (_)=> AddUserCubit(),),
+    BlocProvider<DaysCubit>(create: (_)=> DaysCubit(),),
   ];
 }

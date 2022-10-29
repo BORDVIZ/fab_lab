@@ -1,9 +1,11 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fab_lab/bloc/present%20cubit/present_cubit.dart';
 import 'package:fab_lab/constants/custom_colors.dart';
 import 'package:fab_lab/constants/my_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 
 class MarkSudentsPage extends StatelessWidget {
   const MarkSudentsPage({Key? key, required this.ind}) : super(key: key);
@@ -16,8 +18,8 @@ class MarkSudentsPage extends StatelessWidget {
         present.add(students[i]['name']);
       }
     }
-    await FirebaseFirestore.instance.collection('present').add({
-      'date': DateTime.now(),
+    await FirebaseFirestore.instance.collection('present').doc('${name}_${teacher}_${DateFormat('yMMMMd').format(DateTime.now())}').set({
+      'date': DateFormat('yMMMMd').format(DateTime.now()),
       'lesson': name,
       'name': teacher,
       'students': present

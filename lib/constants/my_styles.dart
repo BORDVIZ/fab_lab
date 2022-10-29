@@ -41,3 +41,9 @@ const white40W200 = TextStyle(
     color: Colors.white,
     fontSize: 40,
     fontWeight: FontWeight.w200,);
+
+const ttblack16W400 = TextStyle(
+    color: Colors.black,
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'TTNorms');
