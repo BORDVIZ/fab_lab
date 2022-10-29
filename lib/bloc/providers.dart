@@ -1,3 +1,4 @@
+import 'package:fab_lab/bloc/add%20subject%20cubit/add_subject_cubit.dart';
 import 'package:fab_lab/bloc/add%20user%20cubit/add_user_cubit.dart';
 import 'package:fab_lab/bloc/auth%20cubit/auth_cubit.dart';
 import 'package:fab_lab/bloc/bottom%20bar%20cubit/bottom_bar_cubit.dart';
@@ -23,5 +24,6 @@ class BlocProviders {
     BlocProvider<CalendarCubit>(create: (_)=> CalendarCubit(),),
     BlocProvider<AddUserCubit>(create: (_)=> AddUserCubit(),),
     BlocProvider<DaysCubit>(create: (_)=> DaysCubit(),),
+    BlocProvider<AddSubjectCubit>(create: (_)=> AddSubjectCubit(),),
   ];
 }
