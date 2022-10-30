@@ -7,6 +7,12 @@ const white16W500 = TextStyle(
     fontWeight: FontWeight.w500,
     fontFamily: 'Quanty');
 
+const white12W400 = TextStyle(
+    color: Colors.white,
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Quanty');
+
 const white16W600 = TextStyle(
     color: Colors.white,
     fontSize: 16,

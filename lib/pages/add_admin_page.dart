@@ -1,6 +1,7 @@
 import 'package:fab_lab/constants/custom_colors.dart';
 import 'package:fab_lab/constants/my_styles.dart';
 import 'package:fab_lab/pages/add_days_page.dart';
+import 'package:fab_lab/pages/add_students_page.dart';
 import 'package:fab_lab/pages/add_subject.dart';
 import 'package:fab_lab/pages/add_user_page.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +60,10 @@ class _AddAdminPageState extends State<AddAdminPage> {
                 color: CustomColors.background,
               ),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => const AddSudents()));
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white.withOpacity(0.08),
                   shape: RoundedRectangleBorder(

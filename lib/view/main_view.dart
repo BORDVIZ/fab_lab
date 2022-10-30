@@ -7,6 +7,7 @@ import 'package:fab_lab/pages/add_admin_page.dart';
 import 'package:fab_lab/pages/admin_main_page.dart';
 import 'package:fab_lab/pages/calendar_page.dart';
 import 'package:fab_lab/pages/check_page.dart';
+import 'package:fab_lab/pages/present_stat.dart';
 import 'package:fab_lab/widgets/custom_admin_bottom_bar.dart';
 import 'package:fab_lab/widgets/custom_bottom_bar.dart';
 import 'package:fab_lab/pages/home_page.dart';
@@ -109,7 +110,7 @@ class _MainViewState extends State<MainView> {
                                           userState.userModel['isAdmin']? 
                                           state.page == 0? const AdminMainPage()
                                             :state.page ==1?const AddAdminPage()
-                                              :state.page ==2?const AddAdminPage()
+                                              :state.page ==2?const PresentStatPage()
                                                 :state.page ==3?const AddAdminPage()
                                                   :const SizedBox()                                   
                                           :state.page == 0
